@@ -1,106 +1,60 @@
-# ZenPharma Infrastructure (Terraform)
+# ZenPharma Infrastructure – Terraform
 
 **Author:** Abdirahman Muse  
 **Organization:** MuseCloudOps-Labs  
-**Project:** ZenPharma – DevOps Portfolio Project
+**Project:** ZenPharma Cloud-Native DevOps Portfolio
 
 ## Overview
 
-This repository contains the Infrastructure as Code (IaC) for the ZenPharma platform, built using **Terraform** and AWS.
-
-The infrastructure is designed to support a scalable, secure, and reliable cloud-native application deployment.
+Terraform Infrastructure as Code (IaC) project for building and managing the infrastructure supporting the ZenPharma platform.
 
 ## Technology Stack
 
 - Terraform
-- AWS
+- AWS IAM
 - Amazon VPC
-- Public and Private Subnets
-- Internet Gateway
-- NAT Gateway
-- Security Groups
-- IAM
-- Amazon EKS
-- Amazon ECR
+- GitHub Actions
+- GitHub OIDC
+- Kubernetes / Amazon EKS (planned)
 
 ## Project Structure
 
 ```text
 infra/
+├── envs/
+│   └── dev/
 ├── modules/
 │   ├── vpc/
-│   ├── eks/
-│   ├── iam/
-│   └── security-groups/
-├── environments/
-│   ├── dev/
-│   └── prod/
-├── main.tf
-├── variables.tf
-├── outputs.tf
-├── providers.tf
-├── versions.tf
-├── terraform.tfvars.example
+│   └── iam/
 ├── .gitignore
 └── README.md
 ```
 
-## Infrastructure Modules
+## Implemented Modules
 
-| Module          | Description                       |
-| --------------- | --------------------------------- |
-| VPC             | AWS network infrastructure        |
-| EKS             | Kubernetes cluster infrastructure |
-| IAM             | Identity and access management    |
-| Security Groups | Network traffic security          |
+| Module          | Status      |
+| --------------- | ----------- |
+| VPC             | Implemented |
+| IAM             | Implemented |
+| GitHub OIDC     | Implemented |
+| IRSA roles      | Implemented |
+| EKS             | Planned     |
+| Security Groups | Planned     |
 
-## Getting Started
+## Security Practices
 
-### 1. Initialize Terraform
-
-```bash
-terraform init
-```
-
-### 2. Validate configuration
-
-```bash
-terraform validate
-```
-
-### 3. Review infrastructure changes
-
-```bash
-terraform plan
-```
-
-### 4. Deploy infrastructure
-
-```bash
-terraform apply
-```
-
-To remove resources created by Terraform:
-
-```bash
-terraform destroy
-```
-
-## Security
-
-- Never commit AWS credentials.
-- Never commit Terraform state files.
-- Keep sensitive variables outside Git.
-- Use IAM roles and least-privilege permissions.
-- Review Terraform plans before deployment.
+- IAM least-privilege permissions
+- GitHub Actions OIDC authentication
+- No hardcoded AWS credentials
+- Terraform state protection
+- Infrastructure validation
 
 ## Project Goals
 
-- Build practical AWS infrastructure using Terraform.
-- Apply Infrastructure as Code best practices.
-- Prepare infrastructure for Amazon EKS deployments.
-- Demonstrate modular Terraform architecture.
-- Develop real-world DevOps and Cloud Engineering skills.
+- Build modular Terraform infrastructure.
+- Implement secure identity and access management.
+- Practise GitOps and CI/CD workflows.
+- Develop practical DevOps and Cloud Engineering skills.
 
 ## Author
 
@@ -109,7 +63,3 @@ terraform destroy
 GitHub: [@Abdirahman455](https://github.com/Abdirahman455)
 
 Organization: [MuseCloudOps-Labs](https://github.com/MuseCloudOps-Labs)
-
----
-
-_Part of the ZenPharma Cloud-Native DevOps Portfolio Project._
