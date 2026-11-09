@@ -19,15 +19,16 @@ Terraform Infrastructure as Code (IaC) project for building and managing the inf
 
 ## Project Structure
 
-```text
+text
 infra/
 ├── envs/
-│   └── dev/
+│ └── dev/
 ├── modules/
-│   ├── vpc/
-│   └── iam/
+│ ├── vpc/
+│ └── iam/
 ├── .gitignore
 └── README.md
+
 ```
 
 ## Implemented Modules
@@ -63,3 +64,4 @@ infra/
 GitHub: [@Abdirahman455](https://github.com/Abdirahman455)
 
 Organization: [MuseCloudOps-Labs](https://github.com/MuseCloudOps-Labs)
+```
