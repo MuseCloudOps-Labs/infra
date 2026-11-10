@@ -6,7 +6,7 @@
 
 ## Architecture Overview
 
-![ZenPharma AWS Architecture](images/aws-architecture.png)
+![ZenPharma AWS Architecture](images/aws_architecture.png)
 
 ## Overview
 
@@ -33,7 +33,8 @@ infra/
 │   ├── vpc/
 │   └── iam/
 ├── images/
-│   └── aws-architecture.png
+│   ├── aws_architecture.png
+│   └── ZenPharma AWS DevOps Architecture.png
 ├── .gitignore
 └── README.md
 ```
