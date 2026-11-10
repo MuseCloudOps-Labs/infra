@@ -47,8 +47,8 @@ infra/
 | IAM             | Implemented |
 | GitHub OIDC     | Implemented |
 | IRSA Roles      | Implemented |
-| EKS             | Planned     |
-| Security Groups | Planned     |
+| EKS             | Implemented |
+| Security Groups | Implemented |
 
 ## Security Practices
 
